@@ -21,3 +21,21 @@ class Fixnum
     coins
   end
 end
+
+class Fixnum
+  def sieve
+    prime_numbers = [2]
+    for i in 3..self
+      prime_check = 0
+      prime_numbers.each() do |prime|
+        if i % prime != 0
+          prime_check += 1
+        end
+      end
+      if prime_check == prime_numbers.length()
+        prime_numbers.push(i)
+      end
+    end
+    prime_numbers
+  end
+end
