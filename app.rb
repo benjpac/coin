@@ -17,3 +17,8 @@ get('/sieve_result') do
   @display = params.fetch("sieve").to_i().sieve()
   erb(:sieve_result)
 end
+
+get('/allergy_result') do
+  @display = params.fetch("allergy").to_i().allergies()
+  erb(:allergy_result)
+end
